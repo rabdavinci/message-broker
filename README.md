@@ -21,3 +21,6 @@ Operation protocol - gRPC
 2. Finish CI/CD
 3. Add Scalability
 4. Add documentation
+
+## SCREENSHOTS
+![image](https://user-images.githubusercontent.com/30826165/139599282-c436c3f6-6c3b-4328-a923-9b00b1d68f0e.png)
