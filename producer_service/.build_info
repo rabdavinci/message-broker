@@ -1,0 +1,4 @@
+APP=ur_go_user_service
+REGISTRY=registry_here
+PROJECT_NAME=producer_service
+CURRENT=$(pwd)

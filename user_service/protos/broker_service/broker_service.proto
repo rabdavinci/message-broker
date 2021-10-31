@@ -1,0 +1,12 @@
+syntax="proto3";
+
+package genproto;
+option go_package="genproto/broker_service";
+
+import "broker.proto";
+import "google/protobuf/empty.proto";
+
+service BrokerService {
+    rpc AddUserTopic(UserTopic) returns (google.protobuf.Empty) {}
+    rpc SendMessageToUser(UserMessage) returns (google.protobuf.Empty) {}
+}

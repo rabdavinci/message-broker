@@ -1,0 +1,20 @@
+syntax="proto3";
+
+package genproto;
+option go_package="genproto/broker_service";
+
+message UserTopic {
+    string user_id = 1;
+    string topic_id = 2;
+    string topic_name = 3;
+}
+
+message TopicMessage {
+    string topic_id = 1;
+    string message = 2;
+}
+
+message GetUserTopicsResponse {
+    repeated UserTopic user_topics = 1;
+    int32 count = 2;
+}

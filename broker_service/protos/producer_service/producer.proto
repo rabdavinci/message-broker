@@ -1,0 +1,23 @@
+syntax="proto3";
+
+package genproto;
+option go_package="genproto/producer_service";
+
+message Topic {
+    string id = 1;
+    string name = 2;
+}
+
+message TopicId {
+    string id = 1;
+}
+
+message SendMessageRequest {
+    string topic_id = 1;
+    string message = 2;
+}
+
+message GetAllTopicResponse {
+    repeated Topic topics = 1;
+    int32 count = 2;
+}

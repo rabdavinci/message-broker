@@ -1,0 +1,20 @@
+syntax="proto3";
+
+package genproto;
+option go_package="genproto/broker_service";
+
+import "broker.proto";
+import "google/protobuf/empty.proto";
+
+service BrokerService {
+    rpc AddUserTopic(UserTopic) returns (google.protobuf.Empty) {}
+    rpc GetUserTopic(GetUserTopicsRequest) returns (GetUserTopicsResponse) {}
+    rpc SendMessageToUser(TopicMessage) returns (google.protobuf.Empty) {}
+}
+
+message GetUserTopicsRequest {
+    int64 offset = 1;
+    int64 limit = 2;
+    string user_id = 3;
+    string topic_id = 4;
+}

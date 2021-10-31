@@ -1,0 +1,12 @@
+syntax="proto3";
+
+package genproto;
+option go_package="genproto/producer_service";
+
+import "producer.proto";
+import "google/protobuf/empty.proto";
+
+service ProducerService {
+    rpc CreateTopic(Topic) returns (TopicId) {}
+    rpc SendMessage(SendMessageRequest) returns (google.protobuf.Empty) {}
+}

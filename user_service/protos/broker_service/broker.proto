@@ -1,0 +1,14 @@
+syntax="proto3";
+
+package genproto;
+option go_package="genproto/broker_service";
+
+message UserTopic {
+    string user_id = 1;
+    string topic_id = 2;
+}
+
+message UserMessage {
+    string user_id = 1;
+    string message = 2;
+}
