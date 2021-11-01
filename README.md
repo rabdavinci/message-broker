@@ -11,7 +11,9 @@ Operation protocol - gRPC
 
 1. Clone project `git clone git@github.com:rabdavinci/message-broker . `
 2. Run postgres and create tables from each service/migrations <br />
-`docker run --name urecruitdb -e POSTGRES_PASSWORD='qwerty' -p 5430:5432 postgres`
+- `docker run --name urecruitdb -e POSTGRES_PASSWORD='qwerty' -p 5430:5432 postgres`
+- `psql -U postgres`
+- import migrations from each service
 4. Run broker service `go run broker_service/main.go`
 5. Run producer service `go run producer_service/main.go`
 6. Run user service `go run user_service/main.go`
